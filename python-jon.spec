@@ -3,7 +3,7 @@
 Summary:	Jon's Python modules (jonpy)
 Summary(pl):	Modu³y Pythona Jona (jonpy)
 Name:		python-jon
-Version:	0.03
+Version:	0.04
 Release:	0.1
 License:	Custom
 Group:		Libraries/Python
@@ -145,18 +145,17 @@ u¿ytkownika w stosunku do ró¿nych czê¶ci serwisu, np.:
 u¿ytkownik mo¿e siê zalogowaæ, a jego nazwa jest pamiêtana w czasie
 gdy przemieszcza siê po stronie.
 
-# not present in sources (yet?)
-#%package dbpool
-#Summary: A database connection pool
-#Group: Development/Languages/Python
-#%pyrequires_eq python
-#Requires: %{name} = %{version}
+%package dbpool
+Summary: A database connection pool
+Group: Development/Languages/Python
+%pyrequires_eq python
+Requires: %{name} = %{version}
 
-#%description dbpool
-#The dbpool module is a wrapper for Python DB-API 2.0-compliant
-#database modules to (a) keep a pool of physical connections available
-#and (b) upgrade the modules to threadsafety level 2, which means that
-#threads can share logical database connections.
+%description dbpool
+The dbpool module is a wrapper for Python DB-API 2.0-compliant
+database modules to (a) keep a pool of physical connections available
+and (b) upgrade the modules to threadsafety level 2, which means that
+threads can share logical database connections.
 
 %prep
 %setup -q -n %{module}-%{version}
@@ -201,6 +200,10 @@ rm -rf $RPM_BUILD_ROOT
 %files session
 %defattr(644,root,root,755)
 %{py_sitedir}/jon/session.py?
+
+%files dbpool
+%defattr(644,root,root,755)
+%{py_sitedir}/jon/dbpool.py?
 
 %files wt
 %defattr(644,root,root,755)

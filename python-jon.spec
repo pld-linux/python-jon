@@ -146,16 +146,24 @@ u¿ytkownik mo¿e siê zalogowaæ, a jego nazwa jest pamiêtana w czasie
 gdy przemieszcza siê po stronie.
 
 %package dbpool
-Summary: A database connection pool
-Group: Development/Languages/Python
+Summary:	A database connection pool
+Summary(pl):	Obs³uga puli po³±czeñ z bazami danych
+Group:		Development/Languages/Python
 %pyrequires_eq python
-Requires: %{name} = %{version}
+Requires:	%{name} = %{version}
 
 %description dbpool
 The dbpool module is a wrapper for Python DB-API 2.0-compliant
 database modules to (a) keep a pool of physical connections available
 and (b) upgrade the modules to threadsafety level 2, which means that
 threads can share logical database connections.
+
+%description dbpool -l pl
+Modu³ dbpool jest wrapperem na modu³y obs³ugi baz danych zgodne z
+pythonowym DB-API 2.0, s³u¿±cym do: (a) utrzymywania dostêpno¶ci puli
+fizycznych po³±czeñ oraz (b) poprawienia bezpieczeñstwa w±tków w
+modu³ach do poziomu 2, co oznacza, ¿e w±tki mog± wspó³dzieliæ logiczne
+po³±czenia z baz±.
 
 %prep
 %setup -q -n %{module}-%{version}

@@ -8,6 +8,7 @@ Release:	1
 License:	Custom
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/%{module}/%{module}-%{version}.tar.gz
+# Source0-md5:	b1826bc2d24add233e484a7234cc72c5
 URL:		http://jonpy.sourceforge.net/
 Obsoletes:	jonpy
 BuildRequires:	rpm-pythonprov

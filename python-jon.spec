@@ -83,7 +83,7 @@ my¶l± o protokole CGI mo¿e byæ u¿ywany bez zmian przy u¿yciu tego modu³u
 razem z protoko³em FastCGI. Ten modu³ jest implementacj± pe³nej
 specyfikacji FastCGI w wersji 1.0, w³±cznie z wieloma jednoczesnymi
 po³±czeniami dla procesu oraz wieloma jednoczesnymi ¿±daniami dla
-po³±czenia. ¯±dania s± wykonywane przy wsparciu pythonowych w±tków.  ale
+po³±czenia. ¯±dania s± wykonywane przy wsparciu pythonowych w±tków, ale
 mo¿na modu³ skonfigurowaæ tak, by w±tków nie u¿ywa³.
 
 %package mime

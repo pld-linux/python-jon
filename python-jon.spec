@@ -4,7 +4,7 @@ Summary:	Jon's Python modules (jonpy)
 Summary(pl):	Modu³y Pythona Jona (jonpy)
 Name:		python-jon
 Version:	0.05
-Release:	1
+Release:	2
 License:	Custom
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/%{module}/%{module}-%{version}.tar.gz
@@ -38,7 +38,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 python setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
 
-rm $RPM_BUILD_ROOT%{py_sitedir}/jon{/wt,}/*.py
+rm $RPM_BUILD_ROOT%{py_sitescriptdir}/jon{/wt,}/*.py
 
 cp -a example/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
@@ -48,8 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc LICENCE README doc/*
-%dir %{py_sitedir}/jon
-%{py_sitedir}/jon/*.py?
-%dir %{py_sitedir}/jon/wt
-%{py_sitedir}/jon/wt/*.py?
+%dir %{py_sitescriptdir}/jon
+%{py_sitescriptdir}/jon/*.py?
+%dir %{py_sitescriptdir}/jon/wt
+%{py_sitescriptdir}/jon/wt/*.py?
 %{_examplesdir}/*

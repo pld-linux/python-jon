@@ -10,7 +10,6 @@ Source0:	http://dl.sourceforge.net/%{module}/%{module}-%{version}.tar.gz
 # Source0-md5:	70974faf02353be0d3dc97c53a7e4ee4
 URL:		http://jonpy.sourceforge.net/
 Obsoletes:	jonpy
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

@@ -1,5 +1,5 @@
 %include	/usr/lib/rpm/macros.python
-%define module jonpy
+%define	module	jonpy
 Summary:	Jon's Python modules (jonpy)
 Summary(pl):	Modu³y Pythona Jona (jonpy)
 Name:		python-jon

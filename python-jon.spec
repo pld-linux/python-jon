@@ -7,7 +7,7 @@ Version:	0.04
 Release:	1
 License:	Custom
 Group:		Libraries/Python
-Source0:	http://prdownloads.sourceforge.net/%{module}/%{module}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/%{module}/%{module}-%{version}.tar.gz
 URL:		http://jonpy.sourceforge.net/
 Obsoletes:	jonpy
 BuildRequires:	rpm-pythonprov

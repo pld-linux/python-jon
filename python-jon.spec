@@ -9,8 +9,10 @@ License:	Custom
 Group:		Libraries/Python
 Source0:	http://prdownloads.sourceforge.net/%{module}/%{module}-%{version}.tar.gz
 URL:		http://jonpy.sourceforge.net/
+Obsoletes:	jonpy
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.python
-
 Summary:	Jon's Python modules (jonpy)
+Summary(pl):	Modu³y Pythona Jona (jonpy)
 Name:		python-jon
 Version:	0.03
 Release:	0.1
@@ -17,8 +17,14 @@ These Python modules provide simple yet powerful multi-threaded
 object-oriented CGI/FastCGI/mod_python/html-templating facilities for
 the Python programming language.
 
+%description -l pl
+Te modu³y Pythona daj± proste i potê¿ne, wielow±tkowe, zorientowane
+obiektowo narzêdzia u³atwiaj±ce korzystanie z szablonów do CGI,
+FastCGI, mod_pythona i HTML w jêzyku Python.
+
 %package cgi
 Summary:	Abstraction layer for CGI-style applications
+Summary(pl):	Warstwa abstrakcji dla aplikacji w stylu CGI
 Group:		Development/Languages/Python
 %pyrequires_eq	python
 Requires:	%{name} = %{version}
@@ -29,8 +35,15 @@ CGI and CGI-style programs. It provides an abstraction layer so that
 the same code can be used with either standard CGI or replacement
 technologies such as FastCGI.
 
+%description cgi -l pl
+Modu³ jon-cgi daje zorientowany obiektowo interfejs do pisania
+programów CGI oraz w stylu CGI. Zapewnia warstwê abstrakcji pozwalaj±c
+na u¿ycie tego samego kodu w zwyk³ym CGI jak i zamiennych
+technologiach, jak FastCGI.
+
 %package modpy
 Summary:	A connector to use the abstraction layer with mod_python
+Summary(pl):	£±cznik do u¿ywania warstwy abstrakcji z modu³em mod_python
 Group:		Development/Languages/Python
 %pyrequires_eq	python
 Requires:	%{name} = %{version}
@@ -40,8 +53,14 @@ The jon-modpy module builds upon the classes defined in the cgi module
 to allow code originally written with the CGI protocol in mind to be
 used unchanged with the mod_python module.
 
+%description modpy -l pl
+Modu³ jon-modpy jest zbudowany nad klasami zdefiniowanymi w module
+cgi, co pozwala kodowi pisanego oryginalnie dla protoko³u CGI byæ
+u¿ywanym bez zmian z poziomu modu³y mod_python.
+
 %package fcgi
 Summary:	A connector to use the abstraction layer with the FastCGI protocol
+Summary(pl):	£±cznik do uzywania warstwy abstrakcji z protoko³em FastCGI
 Group:		Development/Languages/Python
 %pyrequires_eq	python
 Requires:	%{name} = %{version}
@@ -57,8 +76,19 @@ requests per connection. Requests are executed using Python's
 threading facilities, although it can be configured to run without
 using threading.
 
+%description fcgi -l pl
+Modu³ jon-fcgi jest zbudowany nad klasami zdefiniowanymi w module cgi,
+daj±c implementacjê protoko³u FastCGI. Kod oryginalnie napisany z
+my¶l± o protokole CGI mo¿e byæ u¿ywany bez zmian z protoko³em FastCGI
+przy u¿yciu tego modu³u. Ten modu³ jest implementacj± pe³nej
+specyfikacji FastCGI w wersji 1.0, w³±cznie z wieloma jednoczesnymi
+po³±czeniami dla procesu oraz wieloma jednoczesnymi ¿±daniami dla
+po³±czenia. ¯±dania s± wykonywane przy wsparciu pythonowych w±tków.
+ale mo¿na modu³ skonfigurowaæ tak, by w±tków nie u¿ywa³.
+
 %package mime
 Summary:	A simple MIME parser for reading multipart/form-data HTTP requests
+Summary(pl):	Prosty parser MIME do czytania ¿±dañ HTTP multipart/form-data
 Group:		Development/Languages/Python
 %pyrequires_eq	python
 Requires:	%{name} = %{version}
@@ -68,8 +98,15 @@ The jon-mime module provides a simple MIME-parsing class. It is only
 included because the standard Python mimetools/multifile libraries are
 too buggy to use for parsing multipart/form-data HTTP requests.
 
+%description mime -l pl
+Modu³ jon-mime zawiera prost± klasê analizuj±c± MIME. Jest do³±czona
+tutaj tylko dlatego, ¿e standardowe biblioteki Pythona mimetools i
+multifile maj± zbyt du¿o b³êdów, by u¿ywaæ ich do analizy ¿±dañ HTTP
+multipart/form-data.
+
 %package wt
 Summary:	A simple yet extremely powerful web templating system
+Summary(pl):	Prosty, ale ekstremalnie potê¿ny system szablonów dla WWW
 Group:		Development/Languages/Python
 %pyrequires_eq	python
 Requires:	%{name} = %{version}
@@ -81,8 +118,16 @@ that it should involve very low overhead in terms of code repeated per
 page, that it should achieve as completely as possible the separation
 of code and data, and that it should promote modular code re-use.
 
+%description wt -l pl
+Modu³ jon-wt daje zorientowany obiektowo system szablonów HTML. Celami
+tego systemu by³y: ¿eby by³ bardzo prosty, ¿eby dawa³ mo¿liwie
+najmniejszy narzut w postaci kodu powtarzanego na stronie, ¿eby
+pozwala³ na jak najwiêksze odseparowanie kodu od danych oraz ¿eby
+promowa³ wielokrotne u¿ywanie modularnego kodu.
+
 %package session
 Summary:	Session management for HTTP requests
+Summary(pl):	Zarz±dzenie sesj± dla ¿±dañ HTTP
 Group:		Development/Languages/Python
 %pyrequires_eq	python
 Requires:	%{name} = %{version}
@@ -94,13 +139,25 @@ user's requests to various parts of a web site - for example, so that
 a user can "log in" to the web site and their username remembered as
 they navigate the site.
 
-# not present in sources (yet?) #%package dbpool #Summary: A database
-connection pool #Group: Development/Languages/Python #%pyrequires_eq
-python #Requires: %{name} = %{version} # #%description dbpool #The
-dbpool module is a wrapper for Python DB-API 2.0-compliant database
-modules #to (a) keep a pool of physical connections available and (b)
-upgrade the #modules to threadsafety level 2, which means that threads
-can share logical #database connections.
+%description session -l pl
+Modu³ jon-session daje sposób na grupowanie ¿±dañ HTTP w "sesje" tak,
+¿e informacje mog± byæ przechowywane pomiêdzy poszczególnymi ¿±daniami
+u¿ytkownika w stosunku do ró¿nych czê¶ci serwisu - na przyk³ad:
+u¿ytkownik mo¿e siê zalogowaæ, a jego nazwa jest pamiêtana w czasie
+gdy przemieszcza siê po stronie.
+
+# not present in sources (yet?)
+#%package dbpool
+#Summary: A database connection pool
+#Group: Development/Languages/Python
+#%pyrequires_eq python
+#Requires: %{name} = %{version}
+
+#%description dbpool
+#The dbpool module is a wrapper for Python DB-API 2.0-compliant
+#database modules to (a) keep a pool of physical connections available
+#and (b) upgrade the modules to threadsafety level 2, which means that
+#threads can share logical database connections.
 
 %prep
 %setup -q -n jonpy-%{version}

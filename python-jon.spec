@@ -33,7 +33,6 @@ technologies such as FastCGI.
 Summary:	A connector to use the abstraction layer with mod_python
 Group:		Development/Languages/Python
 %pyrequires_eq	python
-Requires:	apache-mod_python
 Requires:	%{name} = %{version}
 
 %description modpy
@@ -45,7 +44,6 @@ used unchanged with the mod_python module.
 Summary:	A connector to use the abstraction layer with the FastCGI protocol
 Group:		Development/Languages/Python
 %pyrequires_eq	python
-#Requires:	apache-mod_fastcgi
 Requires:	%{name} = %{version}
 
 %description fcgi

@@ -1,6 +1,6 @@
 %define	module	jonpy
 Summary:	Jon's Python modules (jonpy)
-Summary(pl):	Modu≥y Pythona Jona (jonpy)
+Summary(pl.UTF-8):   Modu≈Çy Pythona Jona (jonpy)
 Name:		python-jon
 Version:	0.06
 Release:	2
@@ -19,34 +19,34 @@ These Python modules provide simple yet powerful multi-threaded
 object-oriented CGI/FastCGI/mod_python/html-templating facilities for
 the Python programming language.
 
-%description -l pl
-Te modu≥y Pythona daj± proste, wielow±tkowe, zorientowane obiektowo
-narzÍdzia o duøych moøliwo∂ciach u≥atwiaj±ce korzystanie z szablonÛw do
-CGI, FastCGI, mod_pythona i HTML w jÍzyku Python.
+%description -l pl.UTF-8
+Te modu≈Çy Pythona dajƒÖ proste, wielowƒÖtkowe, zorientowane obiektowo
+narzƒôdzia o du≈ºych mo≈ºliwo≈õciach u≈ÇatwiajƒÖce korzystanie z szablon√≥w do
+CGI, FastCGI, mod_pythona i HTML w jƒôzyku Python.
 
 %package doc
 Summary:	Documentation for Jon's Python modules
-Summary(pl):	Dokumentacja do modu≥Ûw Pythona Jona
+Summary(pl.UTF-8):   Dokumentacja do modu≈Ç√≥w Pythona Jona
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
 %description doc
 This module contains documentation files for Jon's Python modules.
 
-%description doc -l pl
-Modu≥ zawieraj±cy dokumentacjÍ dla modu≥Ûw Pythona Jona.
+%description doc -l pl.UTF-8
+Modu≈Ç zawierajƒÖcy dokumentacjƒô dla modu≈Ç√≥w Pythona Jona.
 
 %package examples
 Summary:	Examples for Jon's Python modules
-Summary(pl):	Przyk≥adowe programy do modu≥Ûw Pythona Jona
+Summary(pl.UTF-8):   Przyk≈Çadowe programy do modu≈Ç√≥w Pythona Jona
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
 %description examples
 This module contains examples for Jon's Python modules.
 
-%description examples -l pl
-Modu≥ zawieraj±cy przyk≥adowe programy do modu≥Ûw Pythona Jona.
+%description examples -l pl.UTF-8
+Modu≈Ç zawierajƒÖcy przyk≈Çadowe programy do modu≈Ç√≥w Pythona Jona.
 
 %prep
 %setup -q -n %{module}-%{version}

@@ -1,6 +1,6 @@
 %define	module	jonpy
 Summary:	Jon's Python modules (jonpy)
-Summary(pl.UTF-8):   Moduły Pythona Jona (jonpy)
+Summary(pl.UTF-8):	Moduły Pythona Jona (jonpy)
 Name:		python-jon
 Version:	0.06
 Release:	2
@@ -26,7 +26,7 @@ CGI, FastCGI, mod_pythona i HTML w języku Python.
 
 %package doc
 Summary:	Documentation for Jon's Python modules
-Summary(pl.UTF-8):   Dokumentacja do modułów Pythona Jona
+Summary(pl.UTF-8):	Dokumentacja do modułów Pythona Jona
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -38,7 +38,7 @@ Moduł zawierający dokumentację dla modułów Pythona Jona.
 
 %package examples
 Summary:	Examples for Jon's Python modules
-Summary(pl.UTF-8):   Przykładowe programy do modułów Pythona Jona
+Summary(pl.UTF-8):	Przykładowe programy do modułów Pythona Jona
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 

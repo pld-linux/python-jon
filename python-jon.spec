@@ -52,13 +52,13 @@ Moduł zawierający przykładowe programy do modułów Pythona Jona.
 %setup -q -n %{module}-%{version}
 
 %build
-python setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{py_sitescriptdir},%{_examplesdir}/%{name}-%{version}}
 
-python setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
+%py_install
 
 rm $RPM_BUILD_ROOT%{py_sitescriptdir}/jon{/wt,}/*.py
 
